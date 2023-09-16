@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/11440bc86f.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav>
+        <div class="nav-bar">
+            <div class="logo"><a href="#"><img src="images/logo.png" alt="Hacker Find"></a></div>
+            <div class="nav-links">
+                <ul class="links">
+                    <li><a href="#" class="current-page">Hackers</a></li>
+                    <li><a href="matches/">Matches</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="filters-flex">
+        <div class="child">
+            <p>Filters:</p>
+        </div>
+        <div class="child">
+            <ul class="filters">
+                <li class="dropdown">
+                    <a href="#">Languages<i class="fa fa-angle-down"></i></a>
+                    <ul class="filter-options">
+                        <li>
+                            <input type="checkbox" id="language1" name="language1" value="Python">
+                            <label for="language1"> Python</label><br>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="language2" name="language2" value="Java">
+                            <label for="language1">Java</label><br></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#">Specialties<i class="fa fa-angle-down"></i></a>
+                    <ul class="filter-options">
+                        <li>
+                            <input type="checkbox" id="specialty1" name="specialty1" value="Front-End">
+                            <label for="specialty1">Front End</label><br>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="specialty2" name="specialty2" value="Back-End">
+                            <label for="specialty2">Back End</label><br>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#">Experience<i class="fa fa-angle-down"></i></a>
+                    <ul class="filter-options">
+                        <li>
+                            <input type="checkbox" id="experience1" name="experience1" value="Less-Than-1-Year">
+                            <label for="experience1">&lt; 1 year</label><br>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="experience2" name="experience2" value="1-2-Years">
+                            <label for="experience2">1-2 years</label><br>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#">Commitment<i class="fa fa-angle-down"></i></a>
+                    <ul class="filter-options">
+                        <li>
+                            <input type="checkbox" id="commitment1" name="commitment1" value="Low">
+                            <label for="commitment1">Low</label><br>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="commitment2" name="commitment2" value="Medium">
+                            <label for="commitment2">Medium</label><br>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="commitment3" name="commitment3" value="High">
+                            <label for="commitment3">High</label><br>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="child">
+            <input class="submit" type="submit" value="Submit">
+        </div>
+    </div>
+
+    <div class="body">
+        <div class="flex-box">
+            <div class="flex-child choice">
+                <h1>Maybe not...</h1>
+            </div>
+            <div class="flex-child hacker">
+                <div class="hacker-profile">
+                    <img src="" alt="">
+                    <h2>Hacker Name</h2>
+                </div>
+
+                <div class="hacker-cat">
+                    <p>Language</p>
+                    <div class="cat-container">
+                        <div class="cat-filter">
+                            <p>Python</p>
+                        </div>
+                        <div class="cat-filter">
+                            <p>Python</p>
+                        </div>
+                        <div class="cat-filter">
+                            <p>Python</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex-child choice">
+                <h1>Interested!</h1>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

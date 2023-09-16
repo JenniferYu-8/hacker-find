@@ -1,0 +1,188 @@
+$purple1: #E3DCF1; // #822726
+$purple2: #AA95D7;
+$white: #eeeeee; // rgb(245, 245, 245)
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial';
+}
+
+nav {
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 12vh;
+    background-color: $purple1;
+
+    .nav-bar {
+        // max-width: 1250px; // ?
+        height: 100%;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 3em; // right unit?
+        background-color: $purple1;
+
+        img {
+            width: 10vh; // adjust
+            margin: 1vh;
+            position: absolute; // change later
+            top: 0;
+            left: 0;
+
+            &:hover {
+                transform: scale(1.05);
+                // filter: drop-shadow(0 0 5px $darkRed);
+            }
+        }
+
+        .nav-links {
+            // height: 100%;
+            // line-height: 12vh;
+            margin: auto;
+
+            .links {
+                display: flex;
+
+                li {
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    list-style: none;
+                    // padding: 0.1em 1em;
+                    padding: 0.2em 1em;
+                    white-space: nowrap;
+
+                    &:hover { 
+                        transform: scale(1.02);
+                    }
+
+                    a {
+                        height: 100%;
+                        font-size: 1.1em;
+                        color: black;
+                        text-decoration: none;
+                        align-items: center;
+                        justify-content: center;
+                        text-transform: uppercase;
+
+                        // &:hover {
+                        //     text-shadow: 0 0 1px $darkRed, 0 0 1px $darkRed;
+                        // }
+                    }
+
+                    .current-page {
+                        text-decoration: underline;
+                    }
+
+
+                }
+
+            }
+        }
+    }
+
+}
+
+.filters-flex {
+    margin-top: 12vh;
+    padding: 1em 2em;
+    display: flex;
+    flex-direction: row;
+    background-color: $purple2;
+    height: 7vh;
+
+    p {
+        color: white;
+    }
+
+    .child {
+        margin: 0;
+    }
+
+    .filters {
+        display: flex;
+        flex-direction: row;
+        padding: 0 3vw;
+
+        .dropdown {
+            margin: 0 5vw;
+
+            a {
+                background-color: $white;
+                text-decoration: none;
+                color: black;
+                padding: 5px 10px;
+                border-radius: 50px;
+                width: 50px;
+            }
+
+            i {
+                margin-left: 30px;
+            }
+
+            &:hover { 
+                transform: scale(1);
+
+                .filter-options { // about, conference, resources
+                    animation: growDown 0.2s ease-in-out forwards;
+                    transform-origin: top center;
+                    display: block;
+
+                    li {
+                        &:hover {
+                            background-color: #e2e2e2;
+                        }
+                    }
+
+
+                }
+            }
+        }
+
+        li {
+            list-style: none;
+
+            input {
+                margin-left: 10px;
+            }
+        }
+
+        .filter-options {
+            position: absolute;
+            top: 1.5em;
+            left: 0;
+            line-height: 4vh;
+            background-color: $white;
+            display: none; 
+            width: 140px;
+        }
+    }
+
+    .submit {
+        margin: 0;
+        padding: 0 10px;
+        border-radius: 50px;
+    }
+}
+
+.body {
+    padding: 2vh 2vw;
+
+    .flex-box {
+        display: flex;
+        width: 100%;
+    }
+}
+
+
+// .links {
+//     display: flex;
+//     align-items: center;
+//     list-style-type: none;
+//     text-align: center;
+// }
