@@ -1,5 +1,8 @@
-$purple1: #E3DCF1; // #822726
-$purple2: #AA95D7;
+$purple1: #AE6FAF; // #822726
+$purple2: #D9BFE2;
+$purple3: #F6EDF6;
+$red: #F6B3B3;
+$blue: #ACB9FA;
 $white: #eeeeee; // rgb(245, 245, 245)
 
 * {
@@ -28,7 +31,7 @@ nav {
         background-color: $purple1;
 
         img {
-            width: 10vh; // adjust
+            height: 9vh; // adjust
             margin: 1vh;
             position: absolute; // change later
             top: 0;
@@ -54,25 +57,25 @@ nav {
                     align-items: center;
                     list-style: none;
                     // padding: 0.1em 1em;
-                    padding: 0.2em 1em;
+                    padding: 0.2em 5em;
                     white-space: nowrap;
 
                     &:hover { 
-                        transform: scale(1.02);
+                        transform: scale(1.01);
                     }
 
                     a {
                         height: 100%;
-                        font-size: 1.1em;
+                        font-size: 2em;
                         color: black;
                         text-decoration: none;
                         align-items: center;
                         justify-content: center;
-                        text-transform: uppercase;
+                        text-transform: lowercase;
 
-                        // &:hover {
-                        //     text-shadow: 0 0 1px $darkRed, 0 0 1px $darkRed;
-                        // }
+                        &:hover {
+                            cursor: pointer;
+                        }
                     }
 
                     .current-page {
@@ -90,27 +93,30 @@ nav {
 
 .filters-flex {
     margin-top: 12vh;
-    padding: 1em 2em;
+    padding: 1em 5vw;
     display: flex;
     flex-direction: row;
     background-color: $purple2;
     height: 7vh;
-
-    p {
-        color: white;
-    }
+    white-space: none;
 
     .child {
         margin: 0;
+
+        p {
+            font-size: 1.2em;
+        }
     }
 
     .filters {
         display: flex;
         flex-direction: row;
-        padding: 0 3vw;
+        padding: 0;
+        margin: auto;
+        align-items: center;
 
         .dropdown {
-            margin: 0 5vw;
+            margin: 0 2vw;
 
             a {
                 background-color: $white;
@@ -128,9 +134,7 @@ nav {
             &:hover { 
                 transform: scale(1);
 
-                .filter-options { // about, conference, resources
-                    animation: growDown 0.2s ease-in-out forwards;
-                    transform-origin: top center;
+                .filter-options { 
                     display: block;
 
                     li {
@@ -165,18 +169,112 @@ nav {
 
     .submit {
         margin: 0;
-        padding: 0 10px;
+        padding: 5px 15px;
         border-radius: 50px;
+        background-color: $purple1;
+        border: 1px solid $white;
+        color: $white;
+
+        &:hover {
+            cursor: pointer;
+        }
     }
 }
 
 .body {
-    padding: 2vh 2vw;
+    padding: 5.5vh 5vw;
+    margin: 0;
+    background-color: $purple3;
 
     .flex-box {
         display: flex;
         width: 100%;
+        margin: 0;
+        white-space: nowrap;
+        justify-content: space-between;
     }
+
+    .flex-child {
+        height: 70vh;
+        border-radius: 50px;
+    }
+
+    .choice {
+        text-align: center;
+        padding: 30vh 3vw;
+        font-weight: 100;
+    }
+
+    #yes {
+        background-color: $blue;
+
+        &:hover {
+            transform: scale(1.01);
+            cursor: pointer;
+        }
+
+        &:hover + .hacker {
+            transform: rotate(-5deg);
+        }
+    }
+
+    #no {
+        background-color: $red;
+
+        &:hover {
+            transform: scale(1.01);
+            cursor: pointer;
+        }
+
+        &:hover + .hacker {
+            transform: rotate(-5deg);
+        }
+    }
+
+
+
+    .hacker {
+        background-color: $purple2;
+        width: 40vw;
+        padding: 50px;
+    }
+
+    .hacker-profile {
+        display: flex;
+        margin: 0;
+        width: 100%;
+        align-items: center;
+        padding-bottom: 30px;
+
+        img {
+            padding-right: 30px;
+        }
+    }
+
+    .hacker-cat {
+        padding-top: 10px;
+
+        p {
+            font-size: 1.3em;
+            padding-bottom: 5px;
+        }
+
+        .cat-container {
+            padding: 5px 0;
+            list-style: none;
+            display: flex;
+
+            .cat-filter {
+                margin-right: 20px;
+                padding: 2px 20px;
+                border-radius: 50px;
+                background-color: $purple1;
+                color: $white;
+            }
+        }
+    }
+
+
 }
 
 
